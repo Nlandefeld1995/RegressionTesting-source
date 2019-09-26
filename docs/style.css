@@ -14,7 +14,7 @@ body {
   width: 100%;
 }
 
-.status_table, .logs {
+#status_table, #logs {
   height: 360px;
   overflow-y: scroll;
   display: block;
