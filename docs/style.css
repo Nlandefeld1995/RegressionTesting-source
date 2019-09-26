@@ -18,6 +18,7 @@ body {
   height: 360px;
   overflow-y: scroll;
   display: block;
+  width: 100%;
 }
 
 table {
