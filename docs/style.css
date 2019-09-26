@@ -1,6 +1,7 @@
 #title_div {
   display: inline-flex;
   align-items: center;
+  height: 25px;
 }
 
 .title_bar {
@@ -15,13 +16,13 @@ body {
 }
 
 #status_div {
-  height: 360px;
+  height: 415px;
   overflow-y: scroll;
   display: block;
   width: 100%;
 }
 #log_div {
-  height: 360px;
+  height: 415px;
   overflow-y: scroll;
   display: block;
   width: 100%;
@@ -52,7 +53,7 @@ td {
 
 #run_div {
   padding-top: 2%;
-  padding-bottom: 6%;
+  padding-bottom: 4%;
   padding-left: 4%;
   padding-right: 4%;
 }
