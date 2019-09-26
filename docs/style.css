@@ -14,7 +14,13 @@ body {
   width: 100%;
 }
 
-#status_div, #log_div {
+#status_div {
+  height: 360px;
+  overflow-y: scroll;
+  display: block;
+  width: 100%;
+}
+#log_div {
   height: 360px;
   overflow-y: scroll;
   display: block;
