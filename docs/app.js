@@ -165,13 +165,13 @@ async function tests() {
     let trh = document.createElement('tr');
     let th1 = document.createElement('th')
     th1.innerText = "Run Individualy"
-    th1.width = '30%'
+    th1.width = '20%'
     let th2 = document.createElement('th')
     th2.innerText = "Test Name"
-    th2.width = '30%'
+    th2.width = '60%'
     let th3 = document.createElement('th')
     th3.innerText = "Status"
-    th3.width = '40%'
+    th3.width = '20%'
     trh.appendChild(th1)
     trh.appendChild(th2)
     trh.appendChild(th3)
