@@ -93,8 +93,8 @@ function menuItems() {
     nav.appendChild(b2)
 
     // set main to null to hide logs show tests
-    console.log(config)
-    console.log(config.test_functions)
+    //console.log(config)
+    //console.log(config.test_functions)
     total_tests = config.test_functions.length;
 
     let main = document.getElementById("run_all_div")
@@ -199,7 +199,7 @@ async function tests() {
             document.getElementById("run_all_status").innerText = `Running ${val}/${total_tests}`
             document.getElementById("run_all_status").name = val;
             lastTest = true;
-            console.log(tests[i])
+            //console.log(tests[i])
             document.getElementById(`${tests[i].test_function}`).innerText = "Running"
 
             let test = eval(`${tests[i].test_function}(${ele},${i})`);
@@ -257,8 +257,8 @@ function runAll() {
 }
 
 function updateStatus(test, i) {
-    console.log(test);
-    console.log(`i: ${i}`)
+    //console.log(test);
+    //console.log(`i: ${i}`)
     // update config
     let tests = config.test_functions
     tests[i].status = test.status
@@ -311,7 +311,7 @@ function updateStatus(test, i) {
         }
     }
 
-    console.log(tests)
+    //console.log(tests)
     if (lastTest == false) { runTests(i + 1) }
 
 
@@ -406,7 +406,7 @@ function clearAll() {
     // clear logs
     log_array = []
     update_logs();
-    console.log(tests)
+    //console.log(tests)
 
 
 }
@@ -415,13 +415,13 @@ function runTests(i) {
     let tests = config.test_functions
     total_tests = tests.length;
 
-    console.log(`i: ${i} total tests: ${total_tests}`)
+    //console.log(`i: ${i} total tests: ${total_tests}`)
     if (i < total_tests) {
         let ele = JSON.stringify(tests[i])
         let fun = `${tests[i].test_function}(${ele}, ${i})`
         // run each function
         document.getElementById(`${tests[i].test_function}`).innerText = "Running"
-        console.log(`${tests[i]}`)
+        //console.log(`${tests[i]}`)
         eval(fun)
     }
 
