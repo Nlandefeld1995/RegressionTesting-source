@@ -9,6 +9,10 @@ function hotfixRunAll() {
     document.getElementById("hotfix_run_all_status").innerText = `Running 0/${hotfix_total_tests}`
     lastTest = false;
     run_all_clicked = 'hotfix'
+    hotfix_pass_count =0
+    hotfix_fail_count = 0
+    regression_pass_count =0
+    regression_fail_count = 0
     hotfix_runTests(0)
 }
 
@@ -23,5 +27,9 @@ function regressionRunAll() {
     document.getElementById("regression_run_all_status").innerText = `Running 0/${regression_total_tests}`
     lastTest = false;
     run_all_clicked = 'regression'
+    hotfix_pass_count =0
+    hotfix_fail_count = 0
+    regression_pass_count =0
+    regression_fail_count = 0
     regression_runTests(0)
 }

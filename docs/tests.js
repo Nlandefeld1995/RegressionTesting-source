@@ -16,7 +16,7 @@ async function hotfixTests() {
     else {
         let run_div = document.getElementById('run_div')
         let hotfix_run_button = document.createElement('BUTTON')
-        hotfix_run_button.innerText = "hotfix Run All"
+        hotfix_run_button.innerText = "Hotfix Run All"
         hotfix_run_button.name = "hotfixRunAllTests"
         hotfix_run_button.id = "hotfix_run_all_button"
         hotfix_run_button.addEventListener("click", hotfixRunAll);
@@ -141,7 +141,7 @@ async function regressionTests() {
     else {
         let run_div = document.getElementById('run_div')
         let regression_run_button = document.createElement('BUTTON')
-        regression_run_button.innerText = "regression Run All"
+        regression_run_button.innerText = "Regression Run All"
         regression_run_button.name = "regressionRunAllTests"
         regression_run_button.id = "regression_run_all_button"
         regression_run_button.addEventListener("click", regressionRunAll);
