@@ -56,10 +56,10 @@ function createIndex() {
 
 var hotfix_total_tests;
 var regression_total_tests;
-var hotfix_pass_count=0;
-var hotfix_fail_count=0;
-var regression_pass_count=0;
-var regression_fail_count=0;
+var hotfix_pass_count;
+var hotfix_fail_count;
+var regression_pass_count;
+var regression_fail_count;
 var log_el_array = [];
 var config = {};
 var current_run;
