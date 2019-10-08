@@ -2,6 +2,7 @@ function hotfixRunAll() {
     // blank any incase test is re-run
     document.getElementById("hotfix_run_all_status").name = "0"
     document.getElementById("hotfix_run_all_success").innerText = ""
+    document.getElementById("regression_run_all_success").innerText = ""
     let tests = hotfix_tests ;
     document.getElementById("hotfix_run_all_status").innerText = `Running 0/${hotfix_total_tests}`
     lastTest = false;
@@ -22,6 +23,7 @@ function regressionRunAll() {
     // blank any incase test is re-run
     document.getElementById("regression_run_all_status").name = "0"
     document.getElementById("regression_run_all_success").innerText = ""
+    document.getElementById("hotfix_run_all_success").innerText = ""
     let tests = regression_tests
     document.getElementById("regression_run_all_status").innerText = `Running 0/${regression_total_tests}`
     lastTest = false;
