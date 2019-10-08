@@ -224,4 +224,5 @@
   .run_div_align{
     margin: 0 auto;
     padding-left: 5%;
+    float: left;
   }
