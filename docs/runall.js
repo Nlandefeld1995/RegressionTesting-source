@@ -10,8 +10,7 @@ function hotfixRunAll() {
     hotfix_fail_count = 0
     regression_pass_count =0
     regression_fail_count = 0
-    document.getElementById("hotfix_run_all_success").style.display='none'
-    document.getElementById("regression_run_all_success").style.display='none'
+    
     console.log(`hotfix_fail ${hotfix_fail_count}`)
     console.log(`hotfix_success ${hotfix_pass_count}`)
     console.log(`regression_fail ${regression_fail_count}`)
@@ -31,8 +30,6 @@ function regressionRunAll() {
     hotfix_fail_count = 0
     regression_pass_count =0
     regression_fail_count = 0
-    document.getElementById("hotfix_run_all_success").style.display='none'
-    document.getElementById("regression_run_all_success").style.display='none'
     console.log(`hotfix_fail ${hotfix_fail_count}`)
     console.log(`hotfix_success ${hotfix_pass_count}`)
     console.log(`regression_fail ${regression_fail_count}`)
