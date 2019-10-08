@@ -11,11 +11,6 @@ function hotfixRunAll() {
     hotfix_fail_count = 0
     regression_pass_count =0
     regression_fail_count = 0
-    
-    console.log(`hotfix_fail ${hotfix_fail_count}`)
-    console.log(`hotfix_success ${hotfix_pass_count}`)
-    console.log(`regression_fail ${regression_fail_count}`)
-    console.log(`regression_pass ${regression_pass_count}`)
     hotfix_runTests(0)
 }
 
@@ -32,9 +27,5 @@ function regressionRunAll() {
     hotfix_fail_count = 0
     regression_pass_count =0
     regression_fail_count = 0
-    console.log(`hotfix_fail ${hotfix_fail_count}`)
-    console.log(`hotfix_success ${hotfix_pass_count}`)
-    console.log(`regression_fail ${regression_fail_count}`)
-    console.log(`regression_pass ${regression_pass_count}`)
     regression_runTests(0)
 }
