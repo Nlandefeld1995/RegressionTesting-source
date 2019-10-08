@@ -238,6 +238,9 @@ function updateStatus(tests, i) {
         // if running count is = total then update run_all_success with complete fail/pass
         if (val == regression_total_tests) {
             document.getElementById("regression_run_all_status").innerText = `Finished ${val}/${regression_total_tests}`
+            console.log(regression_pass_count)
+                console.log(regression_fail_count)
+                console.log(regression_total_tests)
             if (regression_pass_count == regression_total_tests) {
                 document.getElementById("regression_run_all_success").innerText = "Pass"
             } else {
@@ -277,9 +280,7 @@ function updateStatus(tests, i) {
             // if running count is = total then update run_all_success with complete fail/pass
             if (val == hotfix_total_tests) {
                 document.getElementById("hotfix_run_all_status").innerText = `Finished ${val}/${hotfix_total_tests}`
-                console.log(hotfix_pass_count)
-                console.log(hotfix_fail_count)
-                console.log(hotfix_total_tests)
+                
                 if (hotfix_pass_count == hotfix_total_tests) {
                     document.getElementById("hotfix_run_all_success").innerText = "Pass"
                 } else {
@@ -324,6 +325,9 @@ function updateStatus(tests, i) {
             // if running count is = total then update run_all_success with complete fail/pass
             if (val == regression_total_tests) {
                 document.getElementById("regression_run_all_status").innerText = `Finished ${val}/${regression_total_tests}`
+                console.log(regression_pass_count)
+                console.log(regression_fail_count)
+                console.log(regression_total_tests)
                 if (regression_pass_count == regression_total_tests) {
                     document.getElementById("regression_run_all_success").innerText = "Pass"
                 } else {
