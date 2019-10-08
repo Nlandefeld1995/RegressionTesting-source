@@ -19,7 +19,7 @@ async function hotfixTests() {
         hotfix_run_button.innerText = "Hotfix Run All"
         hotfix_run_button.name = "hotfixRunAllTests"
         hotfix_run_button.id = "hotfix_run_all_button"
-        
+        hotfix_run_button.style.cssFloat = "left"
         hotfix_run_button.addEventListener("click", hotfixRunAll);
         let hotfix_stat = document.createElement("h3")
         hotfix_stat.className = 'run_div_align'
@@ -145,7 +145,7 @@ async function regressionTests() {
         regression_run_button.innerText = "Regression Run All"
         regression_run_button.name = "regressionRunAllTests"
         regression_run_button.id = "regression_run_all_button"
-        
+        regression_run_button.style.cssFloat = "left"
         regression_run_button.addEventListener("click", regressionRunAll);
         let regression_stat = document.createElement("h3")
         regression_stat.name = "regression_run_all_status"
