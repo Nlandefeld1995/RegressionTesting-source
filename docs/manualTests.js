@@ -17,11 +17,13 @@ function manual_Tests() {
     
         manual_stat.name = "manual_run_all_status"
         manual_stat.id = "manual_run_all_status"
+        manual_stat.className = 'run_div_align'
         manual_stat.innerText = "Not Run"
     
         let manual_success_condition = document.createElement('h3')
         manual_success_condition.id = "manual_run_all_success"
         manual_success_condition.name = "manual_run_all_success"
+        manual_success_condition.className = 'run_div_align'
     
         run_div.appendChild(manual_stat)
         run_div.appendChild(manual_success_condition)

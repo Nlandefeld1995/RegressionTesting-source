@@ -221,4 +221,7 @@
     left:2%;
     text-align: center;
   }
-  
+  .run_div_align{
+    margin: 0 auto;
+    padding-left: 5%;
+  }

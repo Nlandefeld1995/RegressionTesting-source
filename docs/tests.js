@@ -19,14 +19,15 @@ async function hotfixTests() {
         hotfix_run_button.innerText = "Hotfix Run All"
         hotfix_run_button.name = "hotfixRunAllTests"
         hotfix_run_button.id = "hotfix_run_all_button"
+        hotfix_run_button.className = 'run_div_align'
         hotfix_run_button.addEventListener("click", hotfixRunAll);
         let hotfix_stat = document.createElement("h3")
-
+        hotfix_stat.className = 'run_div_align'
         hotfix_stat.name = "hotfix_run_all_status"
         hotfix_stat.id = "hotfix_run_all_status"
         hotfix_stat.innerText = "Not Run"
-
         let hotfix_success_condition = document.createElement('h3')
+        hotfix_success_condition.className = 'run_div_align'
         hotfix_success_condition.id = "hotfix_run_all_success"
         hotfix_success_condition.name = "hotfix_run_all_success"
 
@@ -144,16 +145,18 @@ async function regressionTests() {
         regression_run_button.innerText = "Regression Run All"
         regression_run_button.name = "regressionRunAllTests"
         regression_run_button.id = "regression_run_all_button"
+        regression_run_button.className = 'run_div_align'
         regression_run_button.addEventListener("click", regressionRunAll);
         let regression_stat = document.createElement("h3")
-
         regression_stat.name = "regression_run_all_status"
         regression_stat.id = "regression_run_all_status"
+        regression_stat.className = 'run_div_align'
         regression_stat.innerText = "Not Run"
 
         let regression_success_condition = document.createElement('h3')
         regression_success_condition.id = "regression_run_all_success"
         regression_success_condition.name = "regression_run_all_success"
+        regression_success_condition.className = 'run_div_align'
 
         run_div.appendChild(regression_run_button)
         run_div.appendChild(regression_stat)
