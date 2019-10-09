@@ -139,7 +139,7 @@ function menuItems() {
     // create button
 
     let clearall = document.createElement('BUTTON')
-    clearall.innerText = "Clear All Tests"
+    clearall.innerText = "Clear All"
     clearall.id = "clear_all"
     clearall.addEventListener("click", clearAll);
     run_div.appendChild(clearall)
