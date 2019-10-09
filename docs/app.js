@@ -168,6 +168,12 @@ function updateStatus(tests, i) {
     // update list with test status
     if (document.getElementById(`hotfix_${tests.test_function}`)) {
         document.getElementById(`hotfix_${tests.test_function}`).innerText = tests.status;
+        if(tests.success === true){
+            document.getElementById(`hotfix_test_row${tests.test_function}`).style.backgroundColor = "#a6f5be"
+        } else if(tests.success === false){
+            document.getElementById(`hotfix_test_row${tests.test_function}`).style.backgroundColor = "#ff6054"
+        }
+            
 
     }
     if (document.getElementById(`regression_${tests.test_function}`)) {
