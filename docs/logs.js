@@ -68,6 +68,11 @@ function update_logs_el() {
             td4.style.textAlign = "center"
             let t1 = document.createTextNode(element.name);
             let t2 = document.createTextNode(element.stat);
+            if(element.success === true){
+                tr.style.backgroundColor = "#a6f5be"
+            } else if(element.success === false){
+                tr.style.backgroundColor = "#ff6054"
+            }
             let t3 = document.createTextNode(JSON.stringify(element.msg).replace('[','').replace(']','').replace('"',''));
             let log_drop = document.createElement('i');
             log_drop.id=`log_${element.name}`
@@ -115,6 +120,7 @@ function update_logs_el() {
         //log_el_div.appendChild(list)
         // append div to main
         main.appendChild(list);
+        
     } else {
         main.innerText = "No logs Yet. Please run test to get logs"
     }

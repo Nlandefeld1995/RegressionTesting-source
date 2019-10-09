@@ -173,7 +173,7 @@ function updateStatus(tests, i) {
             document.getElementById(`hotfix_${tests.test_function}`).innerText = tests.status;
         } else if(tests.success === false){
             document.getElementById(`hotfix_test_row__${tests.test_function}`).style.backgroundColor = "#ff6054"
-            document.getElementById(`hotfix_${tests.test_function}`).innerText = "Fail: Check logs for additional info";
+            document.getElementById(`hotfix_${tests.test_function}`).innerText = "Fail: Check logs for info";
         }
             
 
@@ -185,7 +185,7 @@ function updateStatus(tests, i) {
             document.getElementById(`regression_${tests.test_function}`).innerText = tests.status;
         } else if(tests.success === false){
             document.getElementById(`regression_test_row__${tests.test_function}`).style.backgroundColor = "#ff6054"
-            document.getElementById(`regression_${tests.test_function}`).innerText = "Fail: Check logs for additional info";
+            document.getElementById(`regression_${tests.test_function}`).innerText = "Fail: Check logs for info";
         }
     }
     var log_el;
