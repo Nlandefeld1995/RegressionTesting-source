@@ -91,10 +91,15 @@ function update_logs_el() {
                   log_drop.className = 'arrow right'
                 }
             })
-            td4.appendChild(log_drop)
+            
             td1.appendChild(t1);
+            td1.width = "30%"
             td2.appendChild(t2);
+            td2.width = "20%"
             td3.appendChild(t3);
+            td3.width = "40%"
+            td4.appendChild(log_drop)
+            td4.width = '10%'
             tr.appendChild(td1);
             tr.appendChild(td2);
             tr.appendChild(td3);
