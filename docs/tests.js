@@ -43,6 +43,8 @@ async function hotfixTests() {
     document.getElementById("manual_tests").style.display = "none"
     main.style.display = "block"
 
+    let scroll_table= document.createElement('div')
+    scroll_table.className = 'table_div'
     // create div to house status of all tests
     //let status_div = document.createElement('div');
     //status_div.id = "hotfix_status_div"
@@ -123,7 +125,8 @@ async function hotfixTests() {
     //status_div.appendChild(list)
     // append div to main
     main.appendChild(list)
-    main.appendChild(list2)
+    scroll_table.appendChild(list2)
+    main.appendChild(scroll_table)
 }
 
 
@@ -170,6 +173,8 @@ async function regressionTests() {
 
     let main = document.getElementById("regression_tests")
     main.innerHTML = ''
+    let scroll_table= document.createElement('div')
+    scroll_table.className = 'table_div'
     document.getElementById("hotfix_tests").style.display = "none"
     document.getElementById("log_els").style.display = "none"
     document.getElementById("manual_tests").style.display = "none"
@@ -254,7 +259,8 @@ async function regressionTests() {
     //status_div.appendChild(list)
     // append div to main
     main.appendChild(list)
-    main.appendChild(list2)
+    scroll_table.appendChild(list2)
+    main.appendChild(scroll_table)
 }
 
 

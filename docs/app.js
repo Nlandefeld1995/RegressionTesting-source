@@ -39,18 +39,17 @@ function createIndex() {
     b.appendChild(runall_div)
     let hotfix_tests_div = document.createElement('div')
     hotfix_tests_div.id = 'hotfix_tests'
-    hotfix_tests_div.className = 'table_div'
+    
     b.appendChild(hotfix_tests_div)
     let regression_tests_div = document.createElement('div')
     regression_tests_div.id = 'regression_tests'
-    regression_tests_div.className = 'table_div'
+    
     b.appendChild(regression_tests_div)
     let manual_tests_div = document.createElement('div')
     manual_tests_div.id = 'manual_tests'
     b.appendChild(manual_tests_div)
     log_els_div = document.createElement('div')
     log_els_div.id = 'log_els'
-    log_els_div.className = 'table_div'
     b.appendChild(log_els_div)
 
 }

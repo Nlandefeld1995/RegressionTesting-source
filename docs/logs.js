@@ -29,6 +29,8 @@ function log_els() {
 function update_logs_el() {
     let main = document.getElementById("log_els")
     main.innerHTML = ''
+    let scroll_table= document.createElement('div')
+    scroll_table.className = 'table_div'
     if (log_el_array.length > 0) {
 
 
@@ -38,6 +40,7 @@ function update_logs_el() {
 
         // create list of functions and current status
         let list = document.createElement('table');
+        let list2 = document.createElement('table');
         let tBody = document.createElement('tbody')
         let tHead = document.createElement('thead')
         let th1 = document.createElement('th')
@@ -112,15 +115,17 @@ function update_logs_el() {
             
             
             tBody.appendChild(tr);
-            tBody.appendChild(tr2);
+            scr.appendChild(tr2);
             
         });
-        list.appendChild(tBody)
+        list2.appendChild(tBody)
 
         // append list to div
         //log_el_div.appendChild(list)
         // append div to main
         main.appendChild(list);
+        scroll_table.appendChild(list2)
+        main.appendChild(scroll_table)
         
     } else {
         main.innerText = "No logs Yet. Please run test to get logs"
