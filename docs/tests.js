@@ -73,7 +73,7 @@ async function hotfixTests() {
         if (tests[i].testType == "hotfix" || tests[i].testType == "both") {
             let ele = JSON.stringify(tests[i])
             let tr = document.createElement('tr');
-            tr.id=`hotfix_test_row${tests[i].test_function}`
+            tr.id=`hotfix_test_row__${tests[i].test_function}`
             let td1 = document.createElement('td');
             let run_t = document.createElement('BUTTON')
             run_t.id = `${tests[i].test_function}_hotfix_button`

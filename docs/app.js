@@ -169,16 +169,20 @@ function updateStatus(tests, i) {
     if (document.getElementById(`hotfix_${tests.test_function}`)) {
         document.getElementById(`hotfix_${tests.test_function}`).innerText = tests.status;
         if(tests.success === true){
-            document.getElementById(`hotfix_test_row${tests.test_function}`).style.backgroundColor = "#a6f5be"
+            document.getElementById(`hotfix_test_row__${tests.test_function}`).style.backgroundColor = "#a6f5be"
         } else if(tests.success === false){
-            document.getElementById(`hotfix_test_row${tests.test_function}`).style.backgroundColor = "#ff6054"
+            document.getElementById(`hotfix_test_row__${tests.test_function}`).style.backgroundColor = "#ff6054"
         }
             
 
     }
     if (document.getElementById(`regression_${tests.test_function}`)) {
         document.getElementById(`regression_${tests.test_function}`).innerText = tests.status;
-
+        if(tests.success === true){
+            document.getElementById(`regression_test_row${tests.test_function}`).style.backgroundColor = "#a6f5be"
+        } else if(tests.success === false){
+            document.getElementById(`regression_test_row${tests.test_function}`).style.backgroundColor = "#ff6054"
+        }
     }
     var log_el;
     // update the run_all_status with howmany are done. when all are done mark according
