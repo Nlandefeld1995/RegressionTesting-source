@@ -69,7 +69,11 @@ function update_logs_el() {
             td4.style.textAlign = "center"
             let t1 = document.createTextNode(element.name);
             let t2 = document.createTextNode(element.stat);
-            
+            if(element.stat == "Success"){
+                tr.style.backgroundColor = "#a6f5be"
+           } else if(element.stat == "Fail"){
+                tr.style.backgroundColor = "#ff6054"
+           }
             let t3 = document.createTextNode(JSON.stringify(element.msg).replace('[','').replace(']','').replace('"',''));
             let log_drop = document.createElement('i');
             log_drop.id=`log_${element.name}`
@@ -109,11 +113,7 @@ function update_logs_el() {
             
             tBody.appendChild(tr);
             tBody.appendChild(tr2);
-            if(element.stat == "Success"){
-                 document.getElementById(`log_test_row__${element.test_function}`).style.backgroundColor = "#a6f5be"
-            } else if(element.stat == "Fail"){
-                 document.getElementById(`log_test_row__${element.test_function}`).style.backgroundColor = "#ff6054"
-            }
+            
         });
         list.appendChild(tBody)
 
