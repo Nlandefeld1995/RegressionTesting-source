@@ -167,11 +167,13 @@ function updateStatus(tests, i) {
 
     // update list with test status
     if (document.getElementById(`hotfix_${tests.test_function}`)) {
-        document.getElementById(`hotfix_${tests.test_function}`).innerText = tests.status;
+        
         if(tests.success === true){
             document.getElementById(`hotfix_test_row__${tests.test_function}`).style.backgroundColor = "#a6f5be"
+            document.getElementById(`hotfix_${tests.test_function}`).innerText = tests.status;
         } else if(tests.success === false){
             document.getElementById(`hotfix_test_row__${tests.test_function}`).style.backgroundColor = "#ff6054"
+            document.getElementById(`hotfix_${tests.test_function}`).innerText = "Fail: Check logs for additional info";
         }
             
 
@@ -180,8 +182,10 @@ function updateStatus(tests, i) {
         document.getElementById(`regression_${tests.test_function}`).innerText = tests.status;
         if(tests.success === true){
             document.getElementById(`regression_test_row__${tests.test_function}`).style.backgroundColor = "#a6f5be"
+            document.getElementById(`regression_${tests.test_function}`).innerText = tests.status;
         } else if(tests.success === false){
             document.getElementById(`regression_test_row__${tests.test_function}`).style.backgroundColor = "#ff6054"
+            document.getElementById(`regression_${tests.test_function}`).innerText = "Fail: Check logs for additional info";
         }
     }
     var log_el;

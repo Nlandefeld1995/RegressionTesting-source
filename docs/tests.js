@@ -58,10 +58,10 @@ async function hotfixTests() {
     th1.width = '20%'
     let th2 = document.createElement('th')
     th2.innerText = "Test Name"
-    th2.width = '60%'
+    th2.width = '50%'
     let th3 = document.createElement('th')
     th3.innerText = "Status"
-    th3.width = '20%'
+    th3.width = '30%'
     trh.appendChild(th1)
     trh.appendChild(th2)
     trh.appendChild(th3)
@@ -188,10 +188,10 @@ async function regressionTests() {
     th1.width = '20%'
     let th2 = document.createElement('th')
     th2.innerText = "Test Name"
-    th2.width = '60%'
+    th2.width = '50%'
     let th3 = document.createElement('th')
     th3.innerText = "Status"
-    th3.width = '20%'
+    th3.width = '30%'
     trh.appendChild(th1)
     trh.appendChild(th2)
     trh.appendChild(th3)
