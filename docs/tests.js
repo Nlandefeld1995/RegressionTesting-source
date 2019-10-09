@@ -203,7 +203,7 @@ async function regressionTests() {
     for (let i = 0; i < tests.length; i++) {
             let ele = JSON.stringify(tests[i])
             let tr = document.createElement('tr');
-            tr.id=`regression_test_row${tests[i].test_function}`
+            tr.id=`regression_test_row__${tests[i].test_function}`
             let td1 = document.createElement('td');
             let run_t = document.createElement('BUTTON')
             run_t.id = `${tests[i].test_function}_regression_button`
