@@ -58,10 +58,10 @@ function update_logs_el() {
         tHead.appendChild(th4)
         list.appendChild(tHead)
         list.id = "log_el_table"
-        
+
         log_el_array.forEach(element => {
             let tr = document.createElement('tr');
-            tr.id=`log_test_row__${element.test_function}`
+            tr.id = `log_test_row__${element.test_function}`
             let td1 = document.createElement('td');
             let td2 = document.createElement('td');
             let td3 = document.createElement('td');
@@ -69,19 +69,19 @@ function update_logs_el() {
             td4.style.textAlign = "center"
             let t1 = document.createTextNode(element.name);
             let t2 = document.createTextNode(element.stat);
-            
-            let t3 = document.createTextNode(JSON.stringify(element.msg).replace('[','').replace(']','').replace('"',''));
+
+            let t3 = document.createTextNode(JSON.stringify(element.msg).replace('[', '').replace(']', '').replace('"', ''));
             let log_drop = document.createElement('i');
-            log_drop.id=`log_${element.name}`
+            log_drop.id = `log_${element.name}`
             log_drop.className = 'arrow right'
             log_drop.addEventListener("click", function () {
                 var x = document.getElementById(`textArea_${element.name}`);
                 if (x.style.display === "none") {
-                  x.style.display = "block";
-                  log_drop.className = 'arrow down'
+                    x.style.display = "block";
+                    log_drop.className = 'arrow down'
                 } else {
-                  x.style.display = "none";
-                  log_drop.className = 'arrow right'
+                    x.style.display = "none";
+                    log_drop.className = 'arrow right'
                 }
             })
             td4.appendChild(log_drop)
@@ -93,10 +93,10 @@ function update_logs_el() {
             tr.appendChild(td3);
             td4.appendChild(log_drop)
             tr.appendChild(td4)
-            
+
             let tr2 = document.createElement('div')
             tr2.className = 'textDrop'
-            tr2.id=`textArea_${element.name}`
+            tr2.id = `textArea_${element.name}`
             tr2.style.display = "none"
             tr2.className = "log_textArea"
             let q = element.msg
@@ -105,15 +105,11 @@ function update_logs_el() {
                 p.innerText = l
                 tr2.appendChild(p)
             });
-            
-            
+
+
             tBody.appendChild(tr);
             tBody.appendChild(tr2);
-            if(element.success === true){
-                 document.getElementById(`log_test_row__${element.test_function}`).style.backgroundColor = "#a6f5be"
-            } else if(element.success === false){
-                 document.getElementById(`log_test_row__${element.test_function}`).style.backgroundColor = "#ff6054"
-            }
+
         });
         list.appendChild(tBody)
 
@@ -121,8 +117,17 @@ function update_logs_el() {
         //log_el_div.appendChild(list)
         // append div to main
         main.appendChild(list);
-        
+        updatelogcolor()
     } else {
         main.innerText = "No logs Yet. Please run test to get logs"
     }
+}
+function updatelogcolor() {
+    log_el_array.forEach(element => {
+        if (element.success === true) {
+            document.getElementById(`log_test_row__${element.test_function}`).style.backgroundColor = "#a6f5be"
+        } else if (element.success === false) {
+            document.getElementById(`log_test_row__${element.test_function}`).style.backgroundColor = "#ff6054"
+        }
+    });
 }
