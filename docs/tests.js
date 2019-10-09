@@ -44,8 +44,8 @@ async function hotfixTests() {
     main.style.display = "block"
 
     // create div to house status of all tests
-    let status_div = document.createElement('div');
-    status_div.id = "hotfix_status_div"
+    //let status_div = document.createElement('div');
+    //status_div.id = "hotfix_status_div"
 
     // create list of functions and current status
     let list = document.createElement('table');
@@ -118,9 +118,9 @@ async function hotfixTests() {
     }
     // append list to div
     list.appendChild(tBody)
-    status_div.appendChild(list)
+    //status_div.appendChild(list)
     // append div to main
-    main.appendChild(status_div);
+    main.appendChild(list);
 }
 
 
