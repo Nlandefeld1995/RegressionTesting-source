@@ -236,5 +236,8 @@
     display: block;
     overflow-y: scroll;
     height: 25em;
-    width: 43em;
+    width: 43.45em;
+  }
+  tr{
+    height: 1em;
   }
