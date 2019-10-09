@@ -115,7 +115,7 @@ function update_logs_el() {
             
             
             tBody.appendChild(tr);
-            scr.appendChild(tr2);
+            scroll_table.appendChild(tr2);
             
         });
         list2.appendChild(tBody)
