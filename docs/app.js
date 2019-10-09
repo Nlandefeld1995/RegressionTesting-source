@@ -211,7 +211,8 @@ function updateStatus(tests, i) {
         log_el = {
             "name": tests.test_name,
             "stat": st,
-            "msg": tests.log
+            "msg": tests.log,
+            "test_function":tests.test_function
         }
         log_el_array.push(log_el);
         update_logs_el()
@@ -248,7 +249,8 @@ function updateStatus(tests, i) {
         log_el = {
             "name": tests.test_name,
             "stat": st,
-            "msg": tests.log
+            "msg": tests.log,
+            "test_function":tests.test_function
         }
         log_el_array.push(log_el);
         update_logs_el()
@@ -287,7 +289,8 @@ function updateStatus(tests, i) {
             log_el = {
                 "name": tests.test_name,
                 "stat": st,
-                "msg": tests.log
+                "msg": tests.log,
+                "test_function":tests.test_function
             }
             log_el_array.push(log_el);
             update_logs_el()
