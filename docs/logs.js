@@ -33,8 +33,8 @@ function update_logs_el() {
 
 
         // create div to house status of all log_els
-        let log_el_div = document.createElement('div');
-        log_el_div.id = "log_el_div"
+        //let log_el_div = document.createElement('div');
+        //log_el_div.id = "log_el_div"
 
         // create list of functions and current status
         let list = document.createElement('table');
@@ -112,9 +112,9 @@ function update_logs_el() {
         list.appendChild(tBody)
 
         // append list to div
-        log_el_div.appendChild(list)
+        //log_el_div.appendChild(list)
         // append div to main
-        main.appendChild(log_el_div);
+        main.appendChild(list);
     } else {
         main.innerText = "No logs Yet. Please run test to get logs"
     }
