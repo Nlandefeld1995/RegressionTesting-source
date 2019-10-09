@@ -51,8 +51,8 @@ function manual_Tests() {
     let main = document.getElementById("manual_tests")
         main.innerHTML = ''
         main.style.display = "block"
-    let manual_status_div = document.createElement('div');
-    manual_status_div.id = "manual_status_div"
+    //let manual_status_div = document.createElement('div');
+    //manual_status_div.id = "manual_status_div"
 
     // create list of functions and current status
     let list = document.createElement('table');
@@ -184,9 +184,9 @@ function manual_Tests() {
     }
     // append list to div
     list.appendChild(tBody)
-    manual_status_div.appendChild(list)
+    //manual_status_div.appendChild(list)
     // append div to main
-    main.appendChild(manual_status_div);
+    main.appendChild(list);
 }
 
 

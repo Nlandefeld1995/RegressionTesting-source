@@ -173,8 +173,8 @@ async function regressionTests() {
     main.style.display = "block"
 
     // create div to house status of all tests
-    let status_div = document.createElement('div');
-    status_div.id = "regression_status_div"
+    //let status_div = document.createElement('div');
+    //status_div.id = "regression_status_div"
 
     // create list of functions and current status
     let list = document.createElement('table');
@@ -246,9 +246,9 @@ async function regressionTests() {
     }
     // append list to div
     list.appendChild(tBody)
-    status_div.appendChild(list)
+    //status_div.appendChild(list)
     // append div to main
-    main.appendChild(status_div);
+    main.appendChild(list);
 }
 
 
