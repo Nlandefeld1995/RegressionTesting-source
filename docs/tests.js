@@ -49,6 +49,7 @@ async function hotfixTests() {
 
     // create list of functions and current status
     let list = document.createElement('table');
+    let list2 = document.createElement('table');
     let tBody = document.createElement('tbody')
     let tHead = document.createElement('thead')
     tHead.id = "testThead"
@@ -118,10 +119,11 @@ async function hotfixTests() {
         }
     }
     // append list to div
-    list.appendChild(tBody)
+    list2.appendChild(tBody)
     //status_div.appendChild(list)
     // append div to main
-    main.appendChild(list);
+    main.appendChild(list)
+    main.appendChild(list2)
 }
 
 
@@ -179,6 +181,7 @@ async function regressionTests() {
 
     // create list of functions and current status
     let list = document.createElement('table');
+    let list2 = document.createElement('table');
     let tBody = document.createElement('tbody')
     let tHead = document.createElement('thead')
     tHead.id = "testThead"
@@ -247,10 +250,11 @@ async function regressionTests() {
         
     }
     // append list to div
-    list.appendChild(tBody)
+    list2.appendChild(tBody)
     //status_div.appendChild(list)
     // append div to main
-    main.appendChild(list);
+    main.appendChild(list)
+    main.appendChild(list2)
 }
 
 
