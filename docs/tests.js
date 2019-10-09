@@ -242,8 +242,11 @@ async function regressionTests() {
             });
             // updateStatus(test,i)
             td1.appendChild(run_t)
+            td1.width='20%'
             let td2 = document.createElement('td');
+            td2.width='50%'
             let td3 = document.createElement('td');
+            td3.width='30%'
             td3.id = `regression_${tests[i].test_function}`
             let t2 = document.createTextNode(tests[i].test_name);
             let t3 = document.createTextNode(tests[i].status);
