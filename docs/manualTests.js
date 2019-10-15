@@ -148,8 +148,11 @@ function manual_Tests() {
             x.style.display = "none";
             y.style.display = "none";
 
+            test.status = 'Pass'
+            test.success = true
             manual_test_drop.className = 'arrow right'
-            manual_pass(test, i)
+            manual_test_result(test, i)
+            
         })
         let trbtn2 = document.createElement('BUTTON')
         trbtn2.id = `${test.test_function}_button_fail`
@@ -161,8 +164,10 @@ function manual_Tests() {
             x.style.display = "none";
             y.style.display = "none";
 
+            test.status = 'Fail'
+            test.success = false
             manual_test_drop.className = 'arrow right'
-            manual_fail(test, i)
+            manual_test_result(test, i)
         })
         let trbtn3 = document.createElement('BUTTON')
         trbtn3.id = `${test.test_function}_button_cancel`
@@ -194,7 +199,54 @@ function manual_Tests() {
 }
 
 
-function create_buttons(test, i) {
+
+
+function manual_test_result(test, i) {
+    
+    
+    document.getElementById(`manual_${test.test_function}_status`).textContent = test.status
+    if (test.success = true) {
+        manual_pass_count++
+    } else if (test.success = false) {
+        manual_fail_count++
+    }
+    updateManualStatus(test, i)
+}
+
+function updateManualStatus(test, i) {
+    var val
+    if (document.getElementById("manual_run_all_status").name) {
+        val = document.getElementById("manual_run_all_status").name
+    } else { val = 0 }
+
+    if (i == 0) {
+        val = 0
+    }
+    else { val = parseInt(val) }
+
+
+
+    if (val >= manual_total_tests) { }
+    else { val++ }
+    document.getElementById("manual_run_all_status").innerText = `Running ${val}/${manual_total_tests}`
+    document.getElementById("manual_run_all_status").name = val;
+
+
+    // if running count is = total then update run_all_success with complete fail/pass
+    if (val == manual_total_tests) {
+        document.getElementById("manual_run_all_status").innerText = `Finished ${val}/${manual_total_tests}`
+        console.log(manual_pass_count)
+        console.log(manual_fail_count)
+        if (manual_pass_count == manual_total_tests) {
+            document.getElementById("manual_run_all_success").innerText = "Pass"
+        } else {
+            document.getElementById("manual_run_all_success").innerText = "Fail"
+        }
+    }
+
+}
+
+/*function create_buttons(test, i) {
     let manual_test_drop = document.getElementById(`manual_test_drop_${test.test_function}`)
     var x = document.getElementById(`${test.test_function}_button_div`)
     let tr3 = document.createElement('div')
@@ -245,49 +297,4 @@ function create_buttons(test, i) {
     tr3.appendChild(trbtn3)
     x.appendChild(tr3)
 
-}
-
-function manual_test_result(test, i) {
-    
-    
-    document.getElementById(`manual_${test.test_function}_status`).textContent = test.status
-    if (test.success = true) {
-        manual_pass_count++
-    } else if (test.success = false) {
-        manual_fail_count++
-    }
-    updateManualStatus(test, i)
-}
-
-function updateManualStatus(test, i) {
-    var val
-    if (document.getElementById("manual_run_all_status").name) {
-        val = document.getElementById("manual_run_all_status").name
-    } else { val = 0 }
-
-    if (i == 0) {
-        val = 0
-    }
-    else { val = parseInt(val) }
-
-
-
-    if (val >= manual_total_tests) { }
-    else { val++ }
-    document.getElementById("manual_run_all_status").innerText = `Running ${val}/${manual_total_tests}`
-    document.getElementById("manual_run_all_status").name = val;
-
-
-    // if running count is = total then update run_all_success with complete fail/pass
-    if (val == manual_total_tests) {
-        document.getElementById("manual_run_all_status").innerText = `Finished ${val}/${manual_total_tests}`
-        console.log(manual_pass_count)
-        console.log(manual_fail_count)
-        if (manual_pass_count == manual_total_tests) {
-            document.getElementById("manual_run_all_success").innerText = "Pass"
-        } else {
-            document.getElementById("manual_run_all_success").innerText = "Fail"
-        }
-    }
-
-}
+}*/ 
