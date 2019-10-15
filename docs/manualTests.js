@@ -112,7 +112,7 @@ function manual_Tests() {
                 manual_test_drop.className = 'arrow down'
                 let ele = JSON.stringify(test)
                 x.innerHTML = ""
-                create_buttons(test, i)
+                //create_buttons(test, i)
                 eval(`${test.test_function}(${ele},${i})`)
             } else {
 
@@ -131,7 +131,7 @@ function manual_Tests() {
         let tr11 = document.createElement('div')
         let tr2 = document.createElement('div')
         tr2.className = 'manualTestDrop'
-        tr2.id = `${test.test_function}_div`
+        tr11.id = `${test.test_function}_div`
         tr2.style.display = "none"
         tr2.className = "log_textArea"
         let tr3 = document.createElement('div')
