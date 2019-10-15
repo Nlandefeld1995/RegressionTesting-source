@@ -244,3 +244,12 @@
   tr{
     height: 1em;
   }
+  #manual_test_buttons{
+    display: block;
+    position: absolute;
+    /* left: 36%; */
+    margin-top: -2%;
+    background-color: #555;
+    width: 100%;
+    text-align: center;
+  }

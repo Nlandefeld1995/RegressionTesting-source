@@ -137,6 +137,7 @@ function manual_Tests() {
         tr2.className = "log_textArea"
         let tr3 = document.createElement('div')
         tr3.id = `${test.test_function}_buttons`
+        tr3.className = `manual_test_buttons`
         tr3.style.display = "none"
         let trbtn1 = document.createElement('BUTTON')
         trbtn1.id = `${test.test_function}_button_pass`
