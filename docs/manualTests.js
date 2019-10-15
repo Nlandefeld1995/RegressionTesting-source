@@ -112,7 +112,7 @@ function manual_Tests() {
                 manual_test_drop.className = 'arrow down'
                 let ele = JSON.stringify(test)
                 x.innerHTML = ""
-                //create_buttons(test, i)
+                create_buttons(test, i)
                 eval(`${test.test_function}(${ele},${i})`)
             } else {
 
@@ -131,6 +131,7 @@ function manual_Tests() {
         let tr11 = document.createElement('div')
         let tr2 = document.createElement('div')
         tr2.className = 'manualTestDrop'
+        tr11.id = `${test.test_function}_button_div`
         tr2.id = `${test.test_function}_div`
         tr2.style.display = "none"
         tr2.className = "log_textArea"
@@ -195,7 +196,7 @@ function manual_Tests() {
 
 function create_buttons(test, i) {
     let manual_test_drop = document.getElementById(`manual_test_drop_${test.test_function}`)
-    var x = document.getElementById(`${test.test_function}_div`)
+    var x = document.getElementById(`${test.test_function}_button_div`)
     let tr3 = document.createElement('div')
     tr3.id = `${test.test_function}_buttons`
 
@@ -203,7 +204,7 @@ function create_buttons(test, i) {
     trbtn1.id = `${test.test_function}_button_pass`
     trbtn1.innerText = "Pass"
     trbtn1.addEventListener("click", function () {
-        var x = document.getElementById(`${test.test_function}_div`);
+        var x = document.getElementById(`${test.test_function}_button_div`);
         var y = document.getElementById(`${test.test_function}_buttons`)
 
         x.style.display = "none";
@@ -217,7 +218,7 @@ function create_buttons(test, i) {
     trbtn2.id = `${test.test_function}_button_fail`
     trbtn2.innerText = "Fail"
     trbtn2.addEventListener("click", function () {
-        var x = document.getElementById(`${test.test_function}_div`);
+        var x = document.getElementById(`${test.test_function}_button_div`);
         var y = document.getElementById(`${test.test_function}_buttons`)
 
         x.style.display = "none";
@@ -231,7 +232,7 @@ function create_buttons(test, i) {
     trbtn3.id = `${test.test_function}_button_cancel`
     trbtn3.innerText = "Cancel"
     trbtn3.addEventListener("click", function () {
-        var x = document.getElementById(`${test.test_function}_div`);
+        var x = document.getElementById(`${test.test_function}_button_div`);
         var y = document.getElementById(`${test.test_function}_buttons`)
 
         x.style.display = "none";
