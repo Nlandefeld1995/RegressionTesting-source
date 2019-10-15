@@ -120,7 +120,7 @@ function update_logs_el() {
             
             
             tBody.appendChild(tr);
-            scroll_table.appendChild(tr2);
+            tBody.appendChild(tr2);
             
         });
         list2.appendChild(tBody)
