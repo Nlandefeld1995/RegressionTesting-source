@@ -131,7 +131,7 @@ function manual_Tests() {
         let tr11 = document.createElement('div')
         let tr2 = document.createElement('div')
         tr2.className = 'manualTestDrop'
-        tr11.id = `${test.test_function}_div`
+        tr2.id = `${test.test_function}_div`
         tr2.style.display = "none"
         tr2.className = "log_textArea"
         let tr3 = document.createElement('div')
