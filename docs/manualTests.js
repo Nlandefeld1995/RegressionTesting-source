@@ -112,7 +112,7 @@ function manual_Tests() {
                 manual_test_drop.className = 'arrow down'
                 let ele = JSON.stringify(test)
                 x.innerHTML = ""
-                create_buttons(test, i)
+                //create_buttons(test, i)
                 eval(`${test.test_function}(${ele},${i})`)
             } else {
 
@@ -180,7 +180,7 @@ function manual_Tests() {
         tr3.appendChild(trbtn2)
         tr3.appendChild(trbtn3)
         tr11.appendChild(tr2)
-        //tr11.appendChild(tr3)
+        tr11.appendChild(tr3)
         
         tBody.appendChild(tr);
         tBody.appendChild(tr11);
