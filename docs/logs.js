@@ -120,7 +120,7 @@ function update_logs_el() {
             
             
             tBody.appendChild(tr);
-            
+            scroll_table.appendChild(tr2);
             
         });
         list2.appendChild(tBody)
@@ -130,7 +130,6 @@ function update_logs_el() {
         // append div to main
         main.appendChild(list);
         scroll_table.appendChild(list2)
-        scroll_table.appendChild(tr2);
         main.appendChild(scroll_table)
         
     } else {
