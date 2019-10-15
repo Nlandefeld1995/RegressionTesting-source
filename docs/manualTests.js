@@ -128,6 +128,7 @@ function manual_Tests() {
         tr.appendChild(td1)
         tr.appendChild(td2)
         tr.appendChild(td3)
+        let tr11 = document.createElement('div')
         let tr2 = document.createElement('div')
         tr2.className = 'manualTestDrop'
         tr2.id = `${test.test_function}_div`
@@ -177,9 +178,11 @@ function manual_Tests() {
         tr3.appendChild(trbtn1)
         tr3.appendChild(trbtn2)
         tr3.appendChild(trbtn3)
-        tr2.appendChild(tr3)
+        tr11.appendChild(tr2)
+        tr11.appendChild(tr3)
+        
         tBody.appendChild(tr);
-        tBody.appendChild(tr2);
+        tBody.appendChild(tr11);
 
     }
     // append list to div
