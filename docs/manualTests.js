@@ -1,12 +1,12 @@
 var manualTests = []
 var manual_total_tests;
-var manual_pass_count;
-var manual_fail_count;
+var manual_pass_count = 0;
+var manual_fail_count = 0;
 function manual_Tests() {
     manualTests = []
-    manual_pass_count= 0;
+    manual_pass_count = 0;
     manual_fail_count = 0;
-    if(document.getElementById('manual_run_all_status')){
+    if (document.getElementById('manual_run_all_status')) {
         document.getElementById('manual_run_all_success').style.display = "block"
         document.getElementById('manual_run_all_status').style.display = "block"
 
@@ -14,27 +14,27 @@ function manual_Tests() {
         let run_div = document.getElementById('run_div')
 
         let manual_stat = document.createElement("h3")
-    
+
         manual_stat.name = "manual_run_all_status"
         manual_stat.id = "manual_run_all_status"
         manual_stat.className = 'run_div_align'
         manual_stat.innerText = "Not Run"
-    
+
         let manual_success_condition = document.createElement('h3')
         manual_success_condition.id = "manual_run_all_success"
         manual_success_condition.name = "manual_run_all_success"
         manual_success_condition.className = 'run_div_align'
-    
+
         run_div.appendChild(manual_stat)
         run_div.appendChild(manual_success_condition)
-    
-        
+
+
         document.getElementById("regression_tests").style.display = "none"
         document.getElementById("hotfix_tests").style.display = "none"
         document.getElementById("log_els").style.display = "none"
-        
-    
-    
+
+
+
     }
     if (document.getElementById('hotfix_run_all_button')) {
         document.getElementById('hotfix_run_all_button').style.display = "none"
@@ -49,11 +49,11 @@ function manual_Tests() {
 
 
     let main = document.getElementById("manual_tests")
-        main.innerHTML = ''
-        main.style.display = "block"
+    main.innerHTML = ''
+    main.style.display = "block"
     //let manual_status_div = document.createElement('div');
     //manual_status_div.id = "manual_status_div"
-
+    document.getElementById("log_els").style.display = "none"
     // create list of functions and current status
     let list = document.createElement('table');
     let tBody = document.createElement('tbody')
@@ -81,10 +81,10 @@ function manual_Tests() {
     manual_total_tests = 0
     tests.forEach(test => {
         if (test.testType == "manual") {
-    
+
             manualTests.push(test)
             manual_total_tests++
-    
+
         }
     });
     for (let i = 0; i < manualTests.length; i++) {
@@ -153,7 +153,7 @@ function manual_Tests() {
             test.success = true
             manual_test_drop.className = 'arrow right'
             manual_test_result(test, i)
-            
+
         })
         let trbtn2 = document.createElement('BUTTON')
         trbtn2.id = `${test.test_function}_button_fail`
@@ -187,7 +187,7 @@ function manual_Tests() {
         tr3.appendChild(trbtn3)
         tr11.appendChild(tr2)
         tr11.appendChild(tr3)
-        
+
         tBody.appendChild(tr);
         tBody.appendChild(tr11);
 
@@ -203,18 +203,27 @@ function manual_Tests() {
 
 
 function manual_test_result(test, i) {
-    
-    
-    document.getElementById(`manual_${test.test_function}_status`).textContent = test.status
-    if (test.success = true) {
-        manual_pass_count++
-    } else if (test.success = false) {
-        manual_fail_count++
+    console.log(test)
+
+
+    // update manual tests
+    for (let i = 0; i < manualTests.length; i++) {
+        if (manualTests[i].test_function == test.test_function) {
+            manualTests[i] = test
+        }
     }
+
+    document.getElementById(`manual_${test.test_function}_status`).textContent = test.status
+    // if (test.success = true) {
+    //     manual_pass_count++
+    // } else if (test.success = false) {
+    //     manual_fail_count++
+    // }
     updateManualStatus(test, i)
 }
 
 function updateManualStatus(test, i) {
+    console.log(test)
     var val
     if (document.getElementById("manual_run_all_status").name) {
         val = document.getElementById("manual_run_all_status").name
@@ -236,12 +245,24 @@ function updateManualStatus(test, i) {
     // if running count is = total then update run_all_success with complete fail/pass
     if (val == manual_total_tests) {
         document.getElementById("manual_run_all_status").innerText = `Finished ${val}/${manual_total_tests}`
-        console.log(manual_pass_count)
-        console.log(manual_fail_count)
-        if (manual_pass_count == manual_total_tests) {
-            document.getElementById("manual_run_all_success").innerText = "Pass"
-        } else {
-            document.getElementById("manual_run_all_success").innerText = "Fail"
+        // console.log(manual_pass_count)
+        // console.log(manual_fail_count)
+
+
+        manual_pass_count = 0
+        manual_fail_count = 0
+        for (let i = 0; i < manualTests.length; i++) {
+            if (manualTests[i].success == true) {
+                manual_pass_count++
+            }
+            else {
+                manual_fail_count++
+            }
+            if (manual_pass_count == manual_total_tests) {
+                document.getElementById("manual_run_all_success").innerText = "Pass"
+            } else {
+                document.getElementById("manual_run_all_success").innerText = "Fail"
+            }
         }
     }
 
@@ -298,4 +319,4 @@ function updateManualStatus(test, i) {
     tr3.appendChild(trbtn3)
     x.appendChild(tr3)
 
-}*/ 
+}*/
