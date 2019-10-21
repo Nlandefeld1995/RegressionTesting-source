@@ -91,6 +91,7 @@ function manual_Tests() {
         let test = manualTests[i]
 
         let tr = document.createElement('tr');
+        tr.id = `manual_test_row__${test.test_function}`
         let td1 = document.createElement('td');
         let td2 = document.createElement('td')
         td2.id = `manual_${test.test_function}_status`
@@ -214,11 +215,13 @@ function manual_test_result(test, i) {
     }
 
     document.getElementById(`manual_${test.test_function}_status`).textContent = test.status
-    // if (test.success = true) {
-    //     manual_pass_count++
-    // } else if (test.success = false) {
-    //     manual_fail_count++
-    // }
+    if(test.success === true){
+        document.getElementById(`manual_test_row__${test.test_function}`).style.backgroundColor = "#a6f5be"
+        
+    } else if(test.success === false){
+        document.getElementById(`manual_test_row__${test.test_function}`).style.backgroundColor = "#ff6054"
+        
+    }
     updateManualStatus(test, i)
 }
 
@@ -267,56 +270,3 @@ function updateManualStatus(test, i) {
     }
 
 }
-
-/*function create_buttons(test, i) {
-    let manual_test_drop = document.getElementById(`manual_test_drop_${test.test_function}`)
-    var x = document.getElementById(`${test.test_function}_button_div`)
-    let tr3 = document.createElement('div')
-    tr3.id = `${test.test_function}_buttons`
-
-    let trbtn1 = document.createElement('BUTTON')
-    trbtn1.id = `${test.test_function}_button_pass`
-    trbtn1.innerText = "Pass"
-    trbtn1.addEventListener("click", function () {
-        var x = document.getElementById(`${test.test_function}_button_div`);
-        var y = document.getElementById(`${test.test_function}_buttons`)
-
-        x.style.display = "none";
-        y.style.display = "none";
-        test.status = 'Pass'
-        test.success = true
-        manual_test_drop.className = 'arrow right'
-        manual_test_result(test, i)
-    })
-    let trbtn2 = document.createElement('BUTTON')
-    trbtn2.id = `${test.test_function}_button_fail`
-    trbtn2.innerText = "Fail"
-    trbtn2.addEventListener("click", function () {
-        var x = document.getElementById(`${test.test_function}_button_div`);
-        var y = document.getElementById(`${test.test_function}_buttons`)
-
-        x.style.display = "none";
-        y.style.display = "none";
-        test.status = 'Fail'
-        test.success = false
-        manual_test_drop.className = 'arrow right'
-        manual_test_result(test, i)
-    })
-    let trbtn3 = document.createElement('BUTTON')
-    trbtn3.id = `${test.test_function}_button_cancel`
-    trbtn3.innerText = "Cancel"
-    trbtn3.addEventListener("click", function () {
-        var x = document.getElementById(`${test.test_function}_button_div`);
-        var y = document.getElementById(`${test.test_function}_buttons`)
-
-        x.style.display = "none";
-        y.style.display = "none";
-
-        manual_test_drop.className = 'arrow right'
-    })
-    tr3.appendChild(trbtn1)
-    tr3.appendChild(trbtn2)
-    tr3.appendChild(trbtn3)
-    x.appendChild(tr3)
-
-}*/
