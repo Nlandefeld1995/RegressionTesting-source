@@ -53,7 +53,7 @@ function update_logs_el() {
         th3.innerText = "Message"
         th3.width = '40%'
         let th4 = document.createElement('th')
-        th4.innerText = ""
+        th4.innerText = "Expand"
         th4.width = '10%'
         tHead.appendChild(th1)
         tHead.appendChild(th2)
