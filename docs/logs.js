@@ -29,7 +29,7 @@ function log_els() {
 function update_logs_el() {
     let main = document.getElementById("log_els")
     main.innerHTML = ''
-    let scroll_table= document.createElement('div')
+    let scroll_table = document.createElement('div')
     scroll_table.className = 'table_div'
     if (log_el_array.length > 0) {
 
@@ -61,10 +61,10 @@ function update_logs_el() {
         tHead.appendChild(th4)
         list.appendChild(tHead)
         list.id = "log_el_table"
-        
+
         log_el_array.forEach(element => {
             let tr = document.createElement('tr');
-            tr.id=`log_test_row__${element.test_function}`
+            tr.id = `log_test_row__${element.test_function}`
             let td1 = document.createElement('td');
             let td2 = document.createElement('td');
             let td3 = document.createElement('td');
@@ -72,26 +72,26 @@ function update_logs_el() {
             td4.style.textAlign = "center"
             let t1 = document.createTextNode(element.name);
             let t2 = document.createTextNode(element.stat);
-            if(element.stat == "Success"){
+            if (element.stat == "Success") {
                 tr.style.backgroundColor = "#a6f5be"
-           } else if(element.stat == "Fail"){
+            } else if (element.stat == "Fail") {
                 tr.style.backgroundColor = "#ff6054"
-           }
-            let t3 = document.createTextNode(JSON.stringify(element.msg).replace('[','').replace(']','').replace('"',''));
+            }
+            let t3 = document.createTextNode(JSON.stringify(element.msg).replace('[', '').replace(']', '').replace('"', ''));
             let log_drop = document.createElement('i');
-            log_drop.id=`log_${element.name}`
+            log_drop.id = `log_${element.name}`
             log_drop.className = 'arrow right'
             log_drop.addEventListener("click", function () {
                 var x = document.getElementById(`textArea_${element.name}`);
                 if (x.style.display === "none") {
-                  x.style.display = "block";
-                  log_drop.className = 'arrow down'
+                    x.style.display = "block";
+                    log_drop.className = 'arrow down'
                 } else {
-                  x.style.display = "none";
-                  log_drop.className = 'arrow right'
+                    x.style.display = "none";
+                    log_drop.className = 'arrow right'
                 }
             })
-            
+
             td1.appendChild(t1);
             td1.width = "30%"
             td2.appendChild(t2);
@@ -105,10 +105,10 @@ function update_logs_el() {
             tr.appendChild(td3);
             td4.appendChild(log_drop)
             tr.appendChild(td4)
-            
+
             let tr2 = document.createElement('div')
             tr2.className = 'textDrop'
-            tr2.id=`textArea_${element.name}`
+            tr2.id = `textArea_${element.name}`
             tr2.style.display = "none"
             tr2.className = "log_textArea"
             let q = element.msg
@@ -117,21 +117,23 @@ function update_logs_el() {
                 p.innerText = l
                 tr2.appendChild(p)
             });
-            
-            
+
+
             tBody.appendChild(tr);
             tBody.appendChild(tr2);
-            
+
         });
         let final_tr = document.createElement('tr')
         final_tr.style.color = '#555'
         final_tr.style.backgroundColor = '#555'
-        let td1 =  document.createElement('td');
-        td1.width='20%'
-        let td2 = document.createElement('td');
-        td2.width='50%'
+        let td1 = document.createElement('td');
+        td1.width = "30%"
         let td3 = document.createElement('td');
-        td3.width='30%'
+        td2.width = "20%"
+        let td3 = document.createElement('td');
+        td3.width = "40%"
+        let td4 = document.createElement('td');
+        td4.width = '10%'
         final_tr.appendChild(td1)
         final_tr.appendChild(td2)
         final_tr.appendChild(td3)
@@ -144,7 +146,7 @@ function update_logs_el() {
         main.appendChild(list);
         scroll_table.appendChild(list2)
         main.appendChild(scroll_table)
-        
+
     } else {
         main.innerText = "No logs Yet. Please run test to get logs"
     }
