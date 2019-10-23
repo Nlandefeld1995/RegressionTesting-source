@@ -120,6 +120,9 @@ async function hotfixTests() {
             tr.appendChild(td1);
             tr.appendChild(td2);
             tr.appendChild(td3);
+            let final_tr = document.createElement('tr')
+            final_tr.style.color = '#555'
+            tr.appendChild(final_tr)
             tBody.appendChild(tr);
         }
     }
