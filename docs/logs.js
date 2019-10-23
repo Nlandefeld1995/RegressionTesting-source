@@ -123,6 +123,19 @@ function update_logs_el() {
             tBody.appendChild(tr2);
             
         });
+        let final_tr = document.createElement('tr')
+        final_tr.style.color = '#555'
+        final_tr.style.backgroundColor = '#555'
+        let td1 =  document.createElement('td');
+        td1.width='20%'
+        let td2 = document.createElement('td');
+        td2.width='50%'
+        let td3 = document.createElement('td');
+        td3.width='30%'
+        final_tr.appendChild(td1)
+        final_tr.appendChild(td2)
+        final_tr.appendChild(td3)
+        tBody.appendChild(final_tr);
         list2.appendChild(tBody)
 
         // append list to div
