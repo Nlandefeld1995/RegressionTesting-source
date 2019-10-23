@@ -137,6 +137,7 @@ function update_logs_el() {
         final_tr.appendChild(td1)
         final_tr.appendChild(td2)
         final_tr.appendChild(td3)
+        final_tr.appendChild(td4)
         tBody.appendChild(final_tr);
         list2.appendChild(tBody)
 
