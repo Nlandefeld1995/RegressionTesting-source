@@ -134,9 +134,9 @@ async function hotfixTests() {
             td2.width='50%'
             let td3 = document.createElement('td');
             td3.width='30%'
-            final_tra.appendChild(td1)
-            final_tra.appendChild(td2)
-            final_tra.appendChild(td3)
+            final_tr.appendChild(td1)
+            final_tr.appendChild(td2)
+            final_tr.appendChild(td3)
             tBody.appendChild(final_tr);
     }
     // append list to div
