@@ -127,11 +127,11 @@ function update_logs_el() {
         final_tr.style.color = '#555'
         final_tr.style.backgroundColor = '#555'
         let td1 = document.createElement('td');
-        td1.width = "30%"
+        td1.width = '30%'
+        let td2 = document.createElement('td');
+        td2.width = '20%'
         let td3 = document.createElement('td');
-        td2.width = "20%"
-        let td3 = document.createElement('td');
-        td3.width = "40%"
+        td3.width = '40%'
         let td4 = document.createElement('td');
         td4.width = '10%'
         final_tr.appendChild(td1)
