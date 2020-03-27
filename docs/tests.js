@@ -212,7 +212,7 @@ async function regressionTests() {
     tHead.id = "testThead"
     let trh = document.createElement('tr');
     let th1 = document.createElement('th')
-    th1.innerText = "Run Individualy"
+    th1.innerText = "Run Individually"
     th1.width = '20%'
     let th2 = document.createElement('th')
     th2.innerText = "Test Name"
